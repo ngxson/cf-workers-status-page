@@ -43,7 +43,7 @@ monitors:
     linkable: true
 
   - id: uevam
-    name: UEVAM
+    name: UEVAM - Hội sinh viên Việt Nam tại Aix-Marseille
     description: 'Hội sinh viên Việt Nam tại Aix-Marseille'
     url: 'https://uevam.fr/'
     method: GET
@@ -52,7 +52,7 @@ monitors:
     linkable: true
 
   - id: voge
-    name: VOGE
+    name: VOGE - Tổ chức thúc đẩy bình đẳng với Việt Nam
     description: 'Tổ chức thúc đẩy bình đẳng với Việt Nam'
     url: 'https://voge.vn/'
     method: GET
@@ -61,7 +61,7 @@ monitors:
     linkable: true
 
   - id: donghanh-net
-    name: VOGE
+    name: Quỹ học bổng Đồng Hành
     description: 'Quỹ học bổng Đồng Hành'
     url: 'https://donghanh.net/'
     method: GET
