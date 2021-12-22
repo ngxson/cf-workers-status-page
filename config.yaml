@@ -1,6 +1,6 @@
 settings:
-  title: 'Status Page'
-  url: 'https://status-page.eidam.dev' # used for Slack messages
+  title: 'Nui Status Page'
+  url: 'https://status.ngxson.com' # used for Slack messages
   logo: logo-192x192.png # image in ./public/ folder
   daysInHistogram: 90 # number of days you want to display in histogram
   collectResponseTimes: true # collects avg response times from CRON locations
@@ -15,25 +15,65 @@ settings:
   dayInHistogramNotOperational: ' incident(s)' # xx incident(s) recorded
 
 monitors:
-  - id: workers-cloudflare-com # unique identifier
-    name: workers.cloudflare.com
-    description: 'You write code. They handle the rest.' # default=empty
-    url: 'https://workers.cloudflare.com/' # URL to fetch
-    method: GET # default=GET
-    expectStatus: 200 # operational status, default=200
-    followRedirect: false # should fetch follow redirects, default=false
-    linkable: false # allows the title to be a link, default=true
-
-  - id: www-cloudflare-com
-    name: www.cloudflare.com
-    description: 'Built for anything connected to the Internet.'
-    url: 'https://www.cloudflare.com'
+  - id: nuichatbot
+    name: Nui Chatbot
+    description: 'Nui Chatbot server'
+    url: 'https://nuichatbot.herokuapp.com/test/read'
     method: GET
-    expectStatus: 200
-    linkable: true # allows the title to be a link, default=true
+    expectStatus: 200 
+    followRedirect: false
+    linkable: false
 
-  - id: blog-cloudflare-com
-    name: The Cloudflare Blog
-    url: 'https://blog.cloudflare.com/'
+  - id: nui-wp-net
+    name: Nui WordPress Network
+    description: 'Nui WordPress Network main site'
+    url: 'https://wp-network.ngxson.com/'
     method: GET
-    expectStatus: 200
+    expectStatus: 200 
+    followRedirect: false
+    linkable: true
+
+  - id: cnh-spl
+    name: CNH Spotlight
+    description: 'Trang tin tức của học sinh trường THPT chuyên Nguyễn Huệ được thành lập và quản lý bới CLB CNH Spotlight'
+    url: 'https://chuyennguyenhue.com/'
+    method: GET
+    expectStatus: 200 
+    followRedirect: false
+    linkable: true
+
+  - id: uevam
+    name: UEVAM
+    description: 'Hội sinh viên Việt Nam tại Aix-Marseille'
+    url: 'https://uevam.fr/'
+    method: GET
+    expectStatus: 200 
+    followRedirect: false
+    linkable: true
+
+  - id: voge
+    name: VOGE
+    description: 'Tổ chức thúc đẩy bình đẳng với Việt Nam'
+    url: 'https://voge.vn/'
+    method: GET
+    expectStatus: 200 
+    followRedirect: false
+    linkable: true
+
+  - id: donghanh-net
+    name: VOGE
+    description: 'Quỹ học bổng Đồng Hành'
+    url: 'https://donghanh.net/'
+    method: GET
+    expectStatus: 200 
+    followRedirect: false
+    linkable: true
+
+  - id: tonghopevent
+    name: tonghopduancuocthi.web.app
+    description: 'Tổng hợp các dự án và cuộc thi dành cho học sinh, sinh viên'
+    url: 'https://tonghopduancuocthi.web.app/'
+    method: GET
+    expectStatus: 200 
+    followRedirect: false
+    linkable: true
